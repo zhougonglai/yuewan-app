@@ -1,0 +1,20 @@
+.title {
+  font-size: 52px;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  line-height: 76px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not([data-weui-theme='light']) {
+    .page {
+      .page__title {
+        filter: invert(100) hue-rotate(180deg);
+      }
+    }
+  }
+}
+
+.large {
+  font-size: large;
+}

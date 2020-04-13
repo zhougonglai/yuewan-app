@@ -19,8 +19,11 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "express": "^4.17.1",
     "nuxt": "^2.0.0",
-    "vant": "^2.5.9"
+    "vant": "^2.5.9",
+    "weui": "^2.3.0",
+    "weui.js": "^1.2.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",

@@ -1,0 +1,11 @@
+:root {
+  --v-primary-rgb: 255, 211, 62;
+}
+
+$n: 10px;
+
+@import './val';
+@import './reset';
+@import './font';
+@import './help';
+@import './component';

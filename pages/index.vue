@@ -1,6 +1,6 @@
 <template lang="pug">
 #home
-  van-button(type="info") 默认按钮
+  button.weui-btn.weui-btn_primary 默认按钮
 </template>
 <script>
 export default {

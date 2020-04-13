@@ -1,4 +1,4 @@
-import path from 'path'
+// import path from 'path'
 
 export default {
   mode: 'universal',
@@ -16,7 +16,24 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: '//at.alicdn.com/t/font_1461110_95xddgbp4h.css'
+      },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://cdn.bootcss.com/normalize/8.0.1/normalize.min.css'
+      }
+    ],
+    script: [
+      {
+        src: '//at.alicdn.com/t/font_1750089_ung9iul8qw.js'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -25,11 +42,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['vant/lib/index.less'],
+  css: ['weui', '~/css/global.scss'],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~plugins/vant', ssr: true }],
+  plugins: [{ src: '~/plugins/weui', ssr: false }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -60,20 +77,20 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {
-      const theme = path.join(__dirname, './css/theme.less')
-      config.module.rules.push({
-        test: /\.less$/,
-        use: [
-          {
-            loader: 'less-loader',
-            options: {
-              modifyVars: {
-                hack: `true; @import "${theme}";`
-              }
-            }
-          }
-        ]
-      })
+      // const theme = path.join(__dirname, './css/theme.less')
+      // config.module.rules.push({
+      //   test: /\.less$/,
+      //   use: [
+      //     {
+      //       loader: 'less-loader',
+      //       options: {
+      //         modifyVars: {
+      //           hack: `true; @import "${theme}";`
+      //         }
+      //       }
+      //     }
+      //   ]
+      // })
     }
   }
 }

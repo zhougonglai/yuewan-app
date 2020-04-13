@@ -1,0 +1,41 @@
+.page {
+  background-color: var(--weui-BG-0);
+  color: var(--weui-FG-0);
+  transition: background-color 0.2s linear;
+  &__hd {
+    height: 112px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left-content,
+    .right-content {
+      min-width: 160px;
+      height: inherit;
+      display: flex;
+      align-items: center;
+    }
+    .left-content {
+      padding-left: $n;
+    }
+    .right-content {
+      padding-right: $n;
+      justify-content: flex-end;
+    }
+    &.fixed {
+      position: fixed;
+      top: 0;
+    }
+  }
+  &__bd {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+  }
+  &__title {
+    font-size: 52px;
+    font-family: Source Han Sans CN;
+    font-weight: bold;
+    line-height: 76px;
+  }
+}
