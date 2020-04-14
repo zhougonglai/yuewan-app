@@ -7,12 +7,20 @@ section#in
     .weui-form__title.mt-3 Hi~欢迎来到NN约玩
   //- .page__title.mt-3 Hi~欢迎来到NN约玩
   .weui-form__control-area
-    .weui-cells
-      .weui-cell.weui-cell_active.weui-cell_access.weui-cell_select.weui-cell_select-before
-        .weui-cell__hd(@click="pickCountryCode")
-          label.weui-label +86
-        .weui-cell__bd
-          input.weui-input(type="number" pattern="[0-9]*" placeholder="请输入号码" v-model="sign.phone")
+    .weui-cells__group.weui-cells__group_form
+      .weui-cells.weui-cells_form
+        .weui-cell.weui-cell_active.weui-cell_access.weui-cell_select.weui-cell_select-before
+          .weui-cell__hd(@click="pickCountryCode")
+            label.weui-label +86
+          .weui-cell__bd
+            input.weui-input(type="number" pattern="[0-9]*" placeholder="请输入号码" v-model="sign.phone")
+        .weui-cell.weui-cell_active
+          .weui-cell__hd
+            label.weui-label 密码
+          .weui-cell__bd
+            input.weui-input(type="password" placeholder="请输入密码" v-model="sign.pwd")
+  .weui-form__opr-area
+    button.weui-btn.weui-btn_primary 登录
 </template>
 <script>
 export default {
@@ -33,7 +41,8 @@ export default {
   data() {
     return {
       sign: {
-        phone: 12345
+        phone: 12345,
+        pwd: ''
       }
     }
   },

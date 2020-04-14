@@ -1,7 +1,8 @@
 // import path from 'path'
 
-export default {
+const config = {
   mode: 'universal',
+  modern: true,
   /*
    ** Headers of the page
    */
@@ -21,7 +22,7 @@ export default {
       {
         rel: 'stylesheet',
         type: 'text/css',
-        href: '//at.alicdn.com/t/font_1461110_95xddgbp4h.css'
+        href: '//at.alicdn.com/t/font_1461110_lohwkqkqj1.css'
       },
       {
         rel: 'stylesheet',
@@ -31,7 +32,7 @@ export default {
     ],
     script: [
       {
-        src: '//at.alicdn.com/t/font_1750089_ung9iul8qw.js'
+        src: '//at.alicdn.com/t/font_1750089_3lmriaa6v6e.js'
       }
     ]
   },
@@ -54,6 +55,9 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module'
   ],
+  server: {
+    host: '0.0.0.0' // default: localhost
+  },
   /*
    ** Nuxt.js modules
    */
@@ -94,3 +98,7 @@ export default {
     }
   }
 }
+
+// export default config
+// eslint-disable-next-line nuxt/no-cjs-in-config
+module.exports = config

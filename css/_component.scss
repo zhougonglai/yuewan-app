@@ -1,6 +1,13 @@
 .page {
   background-color: var(--weui-BG-0);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
   color: var(--weui-FG-0);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   transition: background-color 0.2s linear;
   &__hd {
     height: 112px;
