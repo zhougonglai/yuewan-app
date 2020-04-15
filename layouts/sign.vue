@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       theme: {
-        auto: true,
+        auto: false,
         light: 1,
         icon: ['#icon-dark', '#icon-sun']
       }
